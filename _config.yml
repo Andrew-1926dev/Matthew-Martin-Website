@@ -1,0 +1,29 @@
+title: Matthew Martin
+email: info@MatthewMartin.io
+description: > #
+  A personal site featuring an introduction to Matthew Martin, an interactive timeline to follow our journey, a few of the brands we have 
+baseurl: ""
+url: ""
+twitter_username: MatthewMartin
+github_username: Andrew-1926dev
+
+assets:
+  sources:
+    - assets/js
+    - assets/css
+  autoprefixer:
+    browsers: ["last 2 versions","> 5%","IE 9"]
+
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+markdown: kramdown
+
+gems:
+  - jekyll-feed
+  - jekyll-assets
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
