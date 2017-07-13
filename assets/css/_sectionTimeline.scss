@@ -17,7 +17,7 @@ a {
   box-sizing: border-box;
   @include transition(0.2s, ease-in-out, opacity);
   opacity: 1;
-  margin: 2em auto;
+  margin: 0 auto;
   &::before {
     content: 'mobile';
     display: none;
@@ -152,7 +152,7 @@ a {
 
 @media only screen and (min-width: 1100px) {
   .cd-horizontal-timeline {
-    margin: 6em auto;
+    margin: 0 auto;
     &::before {
       content: 'desktop';
     }

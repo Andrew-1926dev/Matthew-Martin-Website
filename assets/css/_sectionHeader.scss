@@ -37,7 +37,7 @@ header.anchored-banner h5,
 header.anchored-banner h6 {
 	line-height: 1.3em;
 	color: #fff;
-	background-color: #f90;
+	background-color: $accent;
 	font-family: 'Montserrat';
 }
 
@@ -134,7 +134,7 @@ header.anchored-banner p {
 	content: '';
 	position: absolute;
 	margin: 1.25em 1.3333em;
-	border-left: 30px solid #f90;
+	border-left: 30px solid $accent;
 	border-top: 20px solid transparent;
 	border-bottom: 20px solid transparent;
 	transition-property: border-left-color;
@@ -143,7 +143,7 @@ header.anchored-banner p {
 
 .home-page #play-button:hover {
 	cursor: pointer;
-	background-color: #f90;
+	background-color: $accent;
 }
 
 .home-page #play-button:hover:before {

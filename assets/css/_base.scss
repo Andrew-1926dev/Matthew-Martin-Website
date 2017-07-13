@@ -27,7 +27,15 @@ html {
 				}
 			}
 			.heading {
-				margin-top: -5vh;
+				background: lighten($gray, 90%);
+				border: 1px solid $gray;
+				border-left: none;
+				position: absolute;
+				left: 0;
+				padding: 1.25vh 2rem;
+				color: #333;
+				margin-top: -2.5vh;
+				font-size: 1em;
 			}
 		}
 	}
