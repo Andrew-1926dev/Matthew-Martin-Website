@@ -1,17 +1,17 @@
 html {
-	background: #f0f0f0;
+	background: $white;
 	body {
 		margin: 0;
 		padding: 1rem;
-		color: #333;
+		color: $gray;
 		overflow-x: hidden;
-		background: lighten(lightgray, 5%);
+		background: lighten($gray, 85%);
 		section {
 			position: relative;
-			background: lightgray;
+			background: lighten($gray, 90%);
 			width: 100%;
 			min-height: 110vh;
-			border-bottom: 1px solid gray;
+			border-bottom: 1px solid $gray;
 			&.footer {
 				border-bottom: none;
 			}
