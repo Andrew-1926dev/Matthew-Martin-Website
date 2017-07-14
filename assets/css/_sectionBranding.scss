@@ -1,0 +1,47 @@
+#branding {
+  .container {
+    width: 1200px;
+    background-color: lighten($accent, 25%);
+    .row {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      .brandTile {
+        display: flex;
+        flex: 1;
+        background-color: $accent;
+        min-height: 100px;
+        max-width: calc(100/6);
+        margin: 1rem 0 0 1rem;
+        &:last-of-type {
+          margin-right: 1rem;
+        }
+        img {
+          filter: grayscale(100%);
+          &:hover {
+            filter: grayscale(0%);
+          }
+        }
+        h4 {
+          align-self: flex-end;
+          justify-content: center;
+          margin: 0 auto;
+          font-size: 0.85rem;
+          display: none;
+          text-align: center;
+        }
+        @media only screen and (min-width: 800px) {
+          &:hover {
+            h4 {
+              display: block;
+            }
+          }
+        }
+        @media only screen and (max-width: 800px) {
+          flex: 2;
+        }
+      }
+    }
+  }
+}
+
