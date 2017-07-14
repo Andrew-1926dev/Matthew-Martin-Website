@@ -14,8 +14,8 @@ a {
 /* End Demo Only SCSS */
 
 .cd-horizontal-timeline {
-  box-sizing: border-box;
   @include transition(0.2s, ease-in-out, opacity);
+  box-sizing: border-box;
   opacity: 1;
   margin: 0 auto;
   &::before {
@@ -123,11 +123,19 @@ a {
       -ms-transform: translateX(-50%);
       -o-transform: translateX(-50%);
       transform: translateX(-50%);
-      bottom: -13px;
+      bottom: -10.5px;
       height: 20px;
       width: 20px;
-      border: 4px solid $gray;
+      border: 2px solid $gray;
       background-color: $white;
+    }
+    &.year {
+      line-height: 1.75;
+      &::after {
+        bottom: -21px;
+        height: 40px;
+        width: 40px;
+      }
     }
   }
 }
@@ -237,6 +245,9 @@ ul.cd-timeline-navigation {
   width: 100%;
   overflow: hidden;
   height: 500px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
   li {
     list-style: none;
     position: absolute;
@@ -283,30 +294,35 @@ ul.cd-timeline-navigation {
       animation-direction: reverse;
     }
     >* {
-      max-width: 800px;
+      max-width: 1200px;
       margin: 0 auto;
     }
   }
   h2 {
     font-weight: bold;
-    font-size: 2.6rem;
+    font-size: 2rem;
     font-family: "Playfair Display", serif;
     font-weight: 700;
     line-height: 1.2;
   }
-  em {
+  span.date {
     display: block;
     font-style: italic;
     margin: 10px auto;
-    &::before {
-      content: '- ';
+  }
+  img {
+    float: left;
+    max-height: 300px;
+    padding-right: 1rem;
+    @media only screen and (max-width: 768px) {
+      float: none;
     }
   }
   p {
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: lighten($gray, 5%);
   }
-  em,
+  span.date,
   p {
     line-height: 1.6;
   }
@@ -315,13 +331,13 @@ ul.cd-timeline-navigation {
 @media only screen and (min-width: 768px) {
   .cd-horizontal-timeline .events-content {
     h2 {
-      font-size: 7rem;
+      font-size: 2.5rem;
     }
-    em {
-      font-size: 2rem;
+    span.date {
+      font-size: 1.75rem;
     }
     p {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
   }
 }
