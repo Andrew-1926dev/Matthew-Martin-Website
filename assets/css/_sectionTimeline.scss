@@ -244,10 +244,12 @@ ul.cd-timeline-navigation {
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 500px;
+//  height: 500px;
   display: inline-flex;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
   li {
     list-style: none;
     position: absolute;
