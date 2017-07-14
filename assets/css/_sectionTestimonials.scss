@@ -1,85 +1,94 @@
 .testimonials {
-	h1 {
-		padding: 50px 0;
-		font-weight: 400;
+	.large-12 {
+		padding: 15px 0;
+	}
+	.header {
+		height: 100px;
+		padding-top: 30px;
 		text-align: center;
 	}
-	p {
-		margin: 0 0 20px;
-		line-height: 1.5;
+	.logo {
+		font-family: 'Avenir Next', sans-serif;
+		font-size: 16px;
+		font-weight: 600;
 	}
-	main {
-		min-width: 100%;
-		padding: 0;
-		margin: 0 auto;
+	.wrapper {
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
 		background: #fff;
 	}
-	section {
-		display: none;
-		padding: 20px 0 0;
-		border-top: 1px solid #ddd;
+	.inner {
+		max-width: 1105px;
+		margin: 0 auto;
+		padding: 0;
 	}
-	input {
+	.c-tabs {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		@media (max-width: 850px) {
+			flex-direction: column;
+			max-width: 100%;
+		}
+	}
+	.c-tabs [id*='-tab-content-'] {
 		display: none;
 	}
-	label {
-		display: inline-flex;
-		flex-direction: row;
-		justify-content: center;
-		// display: inline-block;
-		margin: 0 0 -1px;
-		padding: 15px 25px;
-		font-weight: 600;
+	.c-tabs input[type='checkbox'],
+	.c-tabs input[type='radio'] {
+		display: none;
+	}
+	.c-tabs label {
+		flex: 1;
+		padding: 10px 0;
 		text-align: center;
-		color: #bbb;
-		border: 1px solid transparent;
-		width: calc(25% - 3.44em);
+		color: #59d;
+		border: 1px solid #59d;
+		border-left-width: 0;
 	}
-	label:before {
-		font-family: fontawesome;
-		font-weight: normal;
-		margin-right: 10px;
+	.c-tabs label:nth-child(2) {
+		border-left-width: 1px;
 	}
-	label[for*='1']:before {
-		content: '\f1cb';
+	.c-tabs input:checked+label {
+		color: #fff;
+		background: #59d;
 	}
-	label[for*='2']:before {
-		content: '\f17d';
+	.c-tabs-content label {
+		border: 0;
+		max-width: 100%;
 	}
-	label[for*='3']:before {
-		content: '\f16b';
+	.c-tabs-minimal label {
+		flex: none;
+		padding: 10px;
 	}
-	label[for*='4']:before {
-		content: '\f1a9';
-	}
-	label:hover {
-		color: #888;
-		cursor: pointer;
-	}
-	input:checked+label {
-		color: #555;
-		border: 1px solid #ddd;
-		border-top: 2px solid orange;
-		border-bottom: 1px solid #fff;
-	}
-	#tab1:checked~#content1,
-	#tab2:checked~#content2,
-	#tab3:checked~#content3,
-	#tab4:checked~#content4 {
-		display: block;
-	}
-	@media screen and (max-width: 650px) {
-		label {
-			font-size: 0;
+	.c-content {
+		display: none;
+		max-width: 100%;
+		padding: 15px;
+		background: #eee;
+		@media (min-width: 851px) {
+			flex-direction: column;
+			width: 100%;
 		}
-		label:before {
-			margin: 0;
-			font-size: 18px;
+		.left {}
+		.right {
+			display: inline-flex;
+			flex-direction: column;
+			justify-content: center;
 		}
 	}
-	@media screen and (max-width: 400px) {
-		label {
-			padding: 15px;
-		}
+	#c-tab-11:checked~#c-content-11,
+	#c-tab-12:checked~#c-content-12,
+	#c-tab-13:checked~#c-content-13,
+	#c-tab-14:checked~#c-content-14,
+	#c-tab-15:checked~#c-content-15,
+	#c-tab-16:checked~#c-content-16,
+	#c-tab-17:checked~#c-content-17,
+	#c-tab-18:checked~#c-content-18,
+	#c-tab-19:checked~#c-content-19,
+	#c-tab-20:checked~#c-content-20 {
+		display: flex;
+		flex-direction: row;
+		padding-bottom: 0;
 	}
 }

@@ -23,8 +23,7 @@ html {
 				padding: 0;
 				position: absolute;
 				transform: translateY(-50%);
-				span {
-				}
+				span {}
 			}
 			.heading {
 				background: lighten($gray, 90%);
@@ -34,8 +33,9 @@ html {
 				left: 0;
 				padding: 1.25vh 2rem;
 				color: #333;
-				margin-top: -2.5vh;
-				font-size: 1em;
+				margin-top: -4.25vh;
+				font-size: 3em;
+				@media (min-width: 851px) {}
 			}
 		}
 	}
