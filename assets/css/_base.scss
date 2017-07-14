@@ -1,42 +1,40 @@
 html {
-	background: $white;
-	body {
-		margin: 0;
-		padding: 1rem;
-		color: $gray;
-		overflow-x: hidden;
-		background: lighten($gray, 85%);
-		section {
-			position: relative;
-			background: lighten($gray, 90%);
-			width: 100%;
-			min-height: 110vh;
-			border-bottom: 1px solid $gray;
-			&.footer {
-				border-bottom: none;
-			}
-			.title-block {
-				top: 50%;
-				left: 0;
-				right: 0;
-				z-index: 99;
-				padding: 0;
-				position: absolute;
-				transform: translateY(-50%);
-				span {}
-			}
-			.heading {
-				background: lighten($gray, 90%);
-				border: 1px solid $gray;
-				border-left: none;
-				position: absolute;
-				left: 0;
-				padding: 1.25vh 2rem;
-				color: #333;
-				margin-top: -4.25vh;
-				font-size: 3em;
-				@media (min-width: 851px) {}
-			}
-		}
-	}
+  background: $white;
+  body {
+    margin: 0;
+    padding: 1rem;
+    color: $gray;
+    overflow-x: hidden;
+    background: lighten($gray, 85%);
+    section {
+      position: relative;
+      background: lighten($gray, 90%);
+      width: 100%;
+      min-height: 110vh;
+      border-bottom: 1px solid $gray;
+      &#timeline,
+      &#branding,
+      &#testimonials {
+        .heading {
+          background: lighten($gray, 90%);
+          border: 1px solid $gray;
+          border-left: none;
+          position: absolute;
+          left: 0;
+          padding: 1.25vh 2rem;
+          color: #333;
+          margin-top: -4.25vh;
+          font-size: 3em;
+          @media (min-width: 851px) {}
+        }
+        .container {
+          margin: 0 auto;
+          padding: 10vh 0;
+        }
+      }
+      &.footer {
+        border-bottom: none;
+      }
+    }
+  }
 }
