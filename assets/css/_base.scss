@@ -12,7 +12,7 @@ html {
       width: 100%;
       min-height: 110vh;
       border-bottom: 1px solid $gray;
-      &#timeline,
+      &.cd-horizontal-timeline,
       &#branding,
       &#testimonials {
         .heading {
