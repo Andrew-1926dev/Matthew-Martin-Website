@@ -17,6 +17,14 @@
   user-select: $arg;
 }
 
+@mixin animation ($name, $duration, $delay, $fillMode, $playState) {
+  -moz-animation: $name $duration $delay $fillMode $playState;
+  -webkit-animation: $name $duration $delay $fillMode $playState;
+  -o-animation: $name $duration $delay $fillMode $playState;
+  -ms-animation: $name $duration $delay $fillMode $playState;
+  animation: $name $duration $delay $fillMode $playState;
+}
+
 @mixin corners($shorthand) {
   $cs: nth($shorthand, 1); // corner-size
   $-cs: calc(100% - #{$cs}); // corner-width from ends
