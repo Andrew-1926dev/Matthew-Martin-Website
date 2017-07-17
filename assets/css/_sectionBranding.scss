@@ -27,7 +27,7 @@
             filter: grayscale(0%);
             display: none;
           }
-          .overlay {
+          .logoOverlay {
             @include transitionDelay(.25s);
             display: flex;
             background-color: $accent;
@@ -43,7 +43,7 @@
           padding-bottom: 5px;
           filter: grayscale(100%);
         }
-        .overlay {
+        .logoOverlay {
           display: none;
           justify-content: center;
           flex-flow: column;
