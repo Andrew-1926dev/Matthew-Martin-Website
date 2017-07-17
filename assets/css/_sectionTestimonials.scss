@@ -12,11 +12,6 @@
 		font-size: 16px;
 		font-weight: 600;
 	}
-	.wrapper {
-		border-top: 1px solid #ccc;
-		border-bottom: 1px solid #ccc;
-		background: #fff;
-	}
 	.inner {
 		max-width: 1105px;
 		margin: 0 auto;
@@ -45,6 +40,7 @@
 		color: #59d;
 		border: 1px solid #59d;
 		border-left-width: 0;
+		@include userSelect(none);
 	}
 	.c-tabs label:nth-child(2) {
 		border-left-width: 1px;
@@ -70,7 +66,10 @@
 			flex-direction: column;
 			width: 100%;
 		}
-		.left {}
+		.left {
+			display: flex;
+			justify-content: flex-end;
+		}
 		.right {
 			display: inline-flex;
 			flex-direction: column;
