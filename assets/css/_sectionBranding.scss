@@ -7,8 +7,7 @@
       align-content: center;
       .brandTile {
         @include corners(20px 4px solid transparentize($accent, 0.5));
-        @include transition(1.25s, ease, background);
-//        @include transitionDelay(0.25s);
+        @include transition(1.25s, ease-in-out, background);
         display: flex;
         flex: 1;
         flex-flow: column;
@@ -23,12 +22,18 @@
         }
         &:hover {
           @include corners(20px 4px solid $accent);
-          background-color: $accent;
           img {
+            @include transitionDelay(.0s);
+            filter: grayscale(0%);
             display: none;
           }
-          h4 {
+          .overlay {
+            @include transitionDelay(.25s);
             display: flex;
+            background-color: $accent;
+            h4 {
+              display: flex;
+            }
           }
         }
         img {
@@ -37,18 +42,20 @@
           height: auto;
           padding-bottom: 5px;
           filter: grayscale(100%);
-          &:hover {
-            filter: grayscale(0%);
-          }
         }
-        h4 {
+        .overlay {
           display: none;
-          align-self: flex-end;
           justify-content: center;
-          margin: 0 auto;
-          font-size: 1.25rem;
-          text-align: center;
-          color: $white;
+          flex-flow: column;
+          height: 100%;
+          width: 100%;
+          h4 {
+            display: none;
+            margin: 0 auto;
+            font-size: 1.25rem;
+            text-align: center;
+            color: $white;
+          }
         }
         @media only screen and (min-width: 800px) {}
         @media only screen and (max-width: 800px) {}
@@ -56,4 +63,3 @@
     }
   }
 }
-
