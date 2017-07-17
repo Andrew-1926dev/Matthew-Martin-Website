@@ -17,12 +17,12 @@
   user-select: $arg;
 }
 
-@mixin animation ($name, $duration, $delay, $fillMode, $playState) {
-  -moz-animation: $name $duration $delay $fillMode $playState;
-  -webkit-animation: $name $duration $delay $fillMode $playState;
-  -o-animation: $name $duration $delay $fillMode $playState;
-  -ms-animation: $name $duration $delay $fillMode $playState;
-  animation: $name $duration $delay $fillMode $playState;
+@mixin animation ($name, $duration, $timingFunction, $delay, $fillMode) {
+  -moz-animation: $name $duration $timingFunction $delay $fillMode;
+  -webkit-animation: $name $duration $timingFunction $delay $fillMode;
+  -o-animation: $name $duration $timingFunction $delay $fillMode;
+  -ms-animation: $name $duration $timingFunction $delay $fillMode;
+  animation: $name $duration $timingFunction $delay $fillMode;
 }
 
 @mixin corners($shorthand) {
