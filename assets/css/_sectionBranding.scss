@@ -23,50 +23,45 @@
         &:hover {
           @include corners(20px 4px solid $accent);
           .logo {
-            @include animation(slideOut, .2s, 0s, ease-in-out, both);
+            @include animation(slideOut, .2s, ease-in-out, 0s, both);
             img {
               filter: grayscale(0%);
-              @include animation(fadeOut, .2s, 0s, ease-in-out, both);
+              @include animation(fadeOut, .2s, ease-in-out, 0s, both);
             }
           }
           .logoOverlay {
-            @include animation(slideIn, .4s, .2s, ease-in-out, both);
-            //            h4 {
-            //               @include animation(slidein, .4s, .2s, ease-in-out, both);
-            //            }
+            @include animation(slideIn, .4s, ease-in-out, .2s, both);
           }
         }
-        .logo {
-          @include animation(slideIn, .2s, .8s, ease-in-out, both);
-          max-height: calc(120px - 1rem);
-          img {
-            @include animation(slideIn, .2s, .8s, ease-in-out, both);
-            @include userSelect(none);
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            //          padding-bottom: 5px;
-            filter: grayscale(100%);
-          }
-        }
-        .logoOverlay {
-          @include animation(slideOut, .2s, .6s, ease-in-out, both);
-          height: 120px;
-          background: $accent;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          overflow: hidden;
-          h4 {
-            //            @include animation(fadeOut, 1.25s, .15s, ease-in-out, both);
-            font-size: 1.25rem;
-            text-align: center;
-            color: $white;
-          }
-        }
-        @media only screen and (min-width: 800px) {}
-        @media only screen and (max-width: 800px) {}
       }
+      .logo {
+        @include animation(slideIn, .2s, ease-in-out, .8s, both);
+        max-height: calc(120px - 1rem);
+        img {
+          @include animation(slideIn, .2s, ease-in-out, .8s, both);
+          @include userSelect(none);
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          filter: grayscale(100%);
+        }
+      }
+      .logoOverlay {
+        @include animation(slideOut, .2s, ease-in-out, .6s, both);
+        height: 120px;
+        background: $accent;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        h4 {
+          font-size: 1.25rem;
+          text-align: center;
+          color: $white;
+        }
+      }
+      @media only screen and (min-width: 800px) {}
+      @media only screen and (max-width: 800px) {}
     }
   }
 }
@@ -80,14 +75,6 @@
   }
 }
 
-//@-o-keyframes slideIn {
-//  0% {
-//    background: transparent;
-//  }
-//  100% {
-//    background: $accent;
-//  }
-//}
 @-ms-keyframes slideIn {
   0% {
     height: 0%;
@@ -115,14 +102,6 @@
   }
 }
 
-//@-o-keyframes slideOut {
-//  0% {
-//    background: $accent;
-//  }
-//  100% {
-//    background: transparent;
-//  }
-//}
 @-ms-keyframes slideOut {
   0% {
     height: 100%;
