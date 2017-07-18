@@ -10,12 +10,12 @@ html {
 			position: relative;
 			background: lighten($gray, 70%);
 			width: 100%;
-			min-height: 110vh;
 			border-top: 1rem solid #FFF;
 			&.cd-horizontal-timeline,
 			&#branding,
 			&#testimonials {
 				.heading {
+					z-index: 999;
 					background: $accent;
 					border: 1rem solid #FFF;
 					border-left: none;

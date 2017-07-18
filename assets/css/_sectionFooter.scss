@@ -1,0 +1,20 @@
+#footer {
+	min-height: 50vh;
+	position: relative;
+	@media (max-width: 851px) {
+		min-height: 30vh;
+	}
+	.footer-bg {
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		object {
+			min-height: 100%;
+			width: auto;
+			opacity: 0.025;
+		}
+	}
+}

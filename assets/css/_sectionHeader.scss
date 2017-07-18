@@ -21,7 +21,7 @@ p {
 
 @media (max-width:850px) {
 	p {
-//		text-align: justify;
+		//		text-align: justify;
 	}
 }
 
@@ -174,3 +174,19 @@ header.anchored-banner p {
 	position: relative;
 	transform: translateX(-50%);
 }
+//
+//.home-page {
+//	position: relative;
+//	object {
+//		position: absolute;
+//		z-index: 99;
+//		right: 0;
+//		left: 0;
+//		top: 0;
+//		overflow: hidden;
+//		opacity: 0.25;
+//		#layer_1 {
+//			background: #FFF;
+//		}
+//	}
+//}
